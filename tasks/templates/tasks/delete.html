@@ -1,0 +1,9 @@
+<p>"{{item}}"を削除します。
+  <br>よろしいですか？</p>
+
+<a href="{% url 'list' %}">キャンセル</a>
+
+<form method="POST">
+  {% csrf_token %}
+  <input type="submit" name="confirm" value="削除" class="btn btn-danger">
+</form>
